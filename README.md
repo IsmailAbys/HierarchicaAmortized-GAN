@@ -43,7 +43,8 @@ python train.py --workers 8 --img-size 256 --num-class N --exp-name 'HA_GAN_cond
 In our context, we will use the unconditional HA-GAN
 
 
-Track your training with Tensorboard:
+Track your training with Tensorboard by executing:
+
 <p align="center">
   <img width="75%" height="%75" src="https://github.com/IsmailAbys/HierarchicaAmortized-GAN/blob/main/figure/tensorboard.png">
 </p>
