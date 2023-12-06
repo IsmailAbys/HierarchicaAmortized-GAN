@@ -44,14 +44,17 @@ In our context, we will use the unconditional HA-GAN
 
 
 Track your training with Tensorboard by executing:
-
+```Python
+tenorboard --loggir=checkpoint/HA_GAN_run1
+```
+In this case, our parameters are in the folder "HA_GAN_run1", you can change the folder that you save your parameters
 <p align="center">
   <img width="75%" height="%75" src="https://github.com/IsmailAbys/HierarchicaAmortized-GAN/blob/main/figure/tensorboard.png">
 </p>
 
 
 ### Testing
-To visualise and save the results, you may employ the provided notebook .
+To visualise and save the results, you may employ the provided notebook.
 ```bash
 visualization.ipynb
 ```
