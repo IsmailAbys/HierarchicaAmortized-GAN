@@ -36,11 +36,13 @@ python preprocess.py
 ```bash
 python train.py --workers 8 --img-size 256 --num-class 0 --exp-name 'HA_GAN_run1' --data-dir DATA_DIR
 ```
+In our context, we will use the unconditional HA-GAN
 #### Conditional HA-GAN
 ```bash
 python train.py --workers 8 --img-size 256 --num-class N --exp-name 'HA_GAN_cond_run1' --data-dir DATA_DIR
 ```
-In our context, we will use the unconditional HA-GAN
+In this context, N means the number of classes 
+
 
 
 Track your training with Tensorboard by executing:
