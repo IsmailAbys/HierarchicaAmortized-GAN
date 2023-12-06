@@ -1,15 +1,13 @@
 # Hierarchical Amortized GAN (HA-GAN)
 
-Official PyTorch implementation for paper *Hierarchical Amortized GAN for 3D High Resolution Medical Image Synthesis*, accepted to *IEEE Journal of Biomedical and Health Informatics*
-
-<p align="center">
-  <img width="75%" height="%75" src="https://github.com/batmanlab/HA-GAN/blob/master/figures/main_github.png">
-</p>
 
 #### [[Paper & Supplementary Material]](https://ieeexplore.ieee.org/abstract/document/9770375)
 
-Generative Adversarial Networks (GAN) have many potential medical imaging applications. Due to the limited memory of Graphical Processing Units (GPUs), most current 3D GAN models are trained on low-resolution medical images. In this work, we propose a novel end-to-end GAN architecture that can generate high-resolution 3D images. We achieve this goal by using different configurations between training and inference. During training, we adopt a hierarchical structure that simultaneously generates a low-resolution version of the image and a randomly selected sub-volume of the high-resolution image. The hierarchical design has two advantages: First, the memory demand for training on high-resolution images is amortized among sub-volumes. Furthermore, anchoring the high-resolution sub-volumes to a single low-resolution image ensures anatomical consistency between sub-volumes. During inference, our model can directly generate full high-resolution images. We also incorporate an encoder (hidden in the figure to improve clarity) into the model to extract features from the images.
+You find in this repository the code of HA-GAN models for data augmentation.
+Before the training, make sure that you have at least 3000 images for training. You can increase your database by using those [[thechnique]](https://github.com/IsmailAbys/DataPrecessing/tree/main/data_augmentation) for data augmentation.
+```Python
 
+```
 ### Requirements
 - PyTorch
 - scikit-image
@@ -18,10 +16,7 @@ Generative Adversarial Networks (GAN) have many potential medical imaging applic
 - tensorboardX
 - SimpleITK
 
-```bash
-conda env create --name hagan -f environment.yml
-conda activate hagan
-```
+
 
 ### Data Preprocessing
 The volume data need to be cropped or resized to 128<sup>3</sup> or 256<sup>3</sup>, and intensity value need to be scaled to [-1,1]. In addition, we would like to advise you to trim blank axial slices. More details can be found at
