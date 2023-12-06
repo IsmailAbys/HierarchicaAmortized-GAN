@@ -4,7 +4,7 @@
 #### [[Paper & Supplementary Material]](https://ieeexplore.ieee.org/abstract/document/9770375)
 
 You find in this repository the code of HA-GAN models for data augmentation.
-Before the training, make sure that you have at least 3000 images for training. You can increase your database by using those [[thechnique]](https://github.com/IsmailAbys/DataPrecessing/tree/main/data_augmentation) for data augmentation.
+Before the training, make sure that you have at least 3000 images for training. You can increase your database by using those [techniques](https://github.com/IsmailAbys/DataPrecessing/tree/main/data_augmentation) for data augmentation.
 ```Python
 
 ```
