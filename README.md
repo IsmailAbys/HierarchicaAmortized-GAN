@@ -45,7 +45,7 @@ In our context, we will use the unconditional HA-GAN
 
 Track your training with Tensorboard:
 <p align="center">
-  <img width="75%" height="%75" src="(https://github.com/IsmailAbys/HierarchicaAmortized-GAN/blob/main/figure/tensorboard.png)">
+  <img width="75%" height="%75" src="https://github.com/IsmailAbys/HierarchicaAmortized-GAN/blob/main/figure/tensorboard.png">
 </p>
 
 
