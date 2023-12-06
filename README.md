@@ -5,9 +5,13 @@
 
 You find in this repository the code of HA-GAN models for data augmentation.
 Before the training, make sure that you have at least 3000 images for training. You can increase your database by using those [techniques](https://github.com/IsmailAbys/DataPrecessing/tree/main/data_augmentation) for data augmentation.
-```Python
 
+Download the repository 
+```Python
+git clone https://github.com/IsmailAbys/HierarchicaAmortized-GAN.git
+cd HierarchicaAmortized-GAN
 ```
+
 ### Requirements
 - PyTorch
 - scikit-image
@@ -15,7 +19,10 @@ Before the training, make sure that you have at least 3000 images for training. 
 - nilearn
 - tensorboardX
 - SimpleITK
-
+To install those liberairies, excute 
+```Python
+pip install -r requirements.txt
+```
 
 
 ### Data Preprocessing
@@ -33,19 +40,19 @@ python train.py --workers 8 --img-size 256 --num-class 0 --exp-name 'HA_GAN_run1
 ```bash
 python train.py --workers 8 --img-size 256 --num-class N --exp-name 'HA_GAN_cond_run1' --data-dir DATA_DIR
 ```
+In our context, we will use the unconditional HA-GAN
+
 
 Track your training with Tensorboard:
 <p align="center">
   <img width="75%" height="%75" src="https://github.com/batmanlab/HA-GAN/blob/master/figures/tensorboard.png">
 </p>
 
-It will take around 22 hours to train unconditional HA-GAN for 80000 iterations with two NVIDIA Tesla V100 GPU. It is suggested to have at least 3000 images for training to avoid mode collapse, or you may need to consider [data augmentation](https://docs.monai.io/en/stable/transforms.html#intensity-dict).
 
 ### Testing
+To visualise and save the results, you can use thz notebook below.
 ```bash
 visualization.ipynb
-evaluation/visualize_feature_MDS.ipynb
-python evaluation/fid_score.py
 ```
 
 ### Sample images
@@ -53,27 +60,6 @@ python evaluation/fid_score.py
   <img width="75%" height="%75" src="https://github.com/batmanlab/HA-GAN/blob/master/figures/sample_HA_GAN.png">
 </p>
 
-### Pretrained weights
-<table><tbody>
-<!-- START TABLE -->
-<!-- TABLE HEADER -->
-<th valign="bottom">Dataset</th>
-<th valign="bottom">Anatomy</th>
-<th valign="bottom">Iteration</th>
-<th valign="bottom">Checkpoint</th>
-<!-- TABLE BODY -->
-<tr><td align="left"><a href="https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000179.v6.p2">COPDGene</a></td>
-<td align="center">Lung</td>
-<td align="center">80000</td>
-<td align="center"><a href="https://drive.google.com/file/d/1orNvz7DLsCn5KWKjjVpEL4e5mO0akf6g/view?usp=sharing">Download</a></td>
-</tr>
-<tr><td align="left"><a href="https://dataverse.harvard.edu/dataverse/GSP">GSP</a></td>
-<td align="center">Brain</td>
-<td align="center">80000</td>
-<td align="center"><a href="https://drive.google.com/file/d/10AcfBPB_Tnjgy9bSj1qcZTW1s7qTIWRM/view?usp=sharing">Download</a></td>
-</tr>
-  
-</tbody></table>
 
 ### Citation
 ```
