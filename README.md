@@ -50,7 +50,7 @@ Track your training with Tensorboard:
 
 
 ### Testing
-To visualise and save the results, you can use thz notebook below.
+To visualise and save the results, you may employ the provided notebook .
 ```bash
 visualization.ipynb
 ```
