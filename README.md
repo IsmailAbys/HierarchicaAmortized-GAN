@@ -55,12 +55,6 @@ To visualise and save the results, you can use thz notebook below.
 visualization.ipynb
 ```
 
-### Sample images
-<p align="center">
-  <img width="75%" height="%75" src="https://github.com/batmanlab/HA-GAN/blob/master/figures/sample_HA_GAN.png">
-</p>
-
-
 ### Citation
 ```
 @ARTICLE{hagan2022,
